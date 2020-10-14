@@ -8,17 +8,17 @@ var eta = prompt('Quanti anni hai?');
 // prezzotratta
 
 var prezzoTratta = km * 0.21;
-
-//ciclo di selezione con tre opzioni
+var prezzo20 = prezzoTratta * 20 /100;
+var prezzo40 = prezzoTratta * 40 /100;
+//ciclo di selezione con tre opzioni e stampa
 
 if (eta < 18) {
-  console.log (prezzoTratta - (prezzoTratta * 20 / 100));
+ document.getElementById('prezzo').innerHTML = prezzo20.toFixed(2);
+  console.log('Il prezzo è ' + prezzo20.toFixed(2));
 } else if (eta > 65) {
-  console.log(prezzoTratta - (prezzoTratta * 40 / 100));
+  document.getElementById('prezzo').innerHTML = prezzo40.toFixed(2);
+   console.log('Il prezzo è ' + prezzo40.toFixed(2));
 } else {
-  console.log (prezzoTratta);
+  document.getElementById('prezzo').innerHTML = prezzoTratta.toFixed(2);
+   console.log('Il prezzo è ' + prezzoTratta.toFixed(2));
 }
-
-//stampa ris
-
-document.getElementById("prezzo").innerHTML = prezzoTratta;
