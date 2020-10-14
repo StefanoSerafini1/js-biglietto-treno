@@ -19,6 +19,6 @@ if (eta < 18) {
   document.getElementById('prezzo').innerHTML = prezzo40.toFixed(2) + '€  grazie allo sconto inserito del 40% per gli over 65';
    console.log('Il prezzo è ' + prezzo40.toFixed(2));
 } else {
-  document.getElementById('prezzo').innerHTML = prezzoTratta.toFixed(2);
+  document.getElementById('prezzo').innerHTML = prezzoTratta.toFixed(2)+ '€ prezzo intero senza scontistiche';
    console.log('Il prezzo è ' + prezzoTratta.toFixed(2));
 }
